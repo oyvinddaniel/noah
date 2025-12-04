@@ -1,9 +1,9 @@
 # Nixpacks configuration for Railway
 [phases.setup]
-nixPkgs = ["nodejs_18", "python3", "gcc", "gnumake"]
+nixPkgs = ["nodejs_18", "python3", "gcc", "gnumake", "libtool", "autoconf", "automake"]
 
 [phases.install]
-cmds = ["npm ci"]
+cmds = ["npm ci", "npm rebuild better-sqlite3"]
 
 [phases.build]
 cmds = ["mkdir -p database"]

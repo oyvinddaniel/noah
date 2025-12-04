@@ -14,8 +14,17 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+import { existsSync, mkdirSync } from 'fs';
+
 const PORT = process.env.PORT || 3000;
 const DATABASE_PATH = process.env.DATABASE_PATH || './database/app.db';
+
+// Ensure database directory exists
+const dbDir = DATABASE_PATH.substring(0, DATABASE_PATH.lastIndexOf('/'));
+if (dbDir && !existsSync(dbDir)) {
+    mkdirSync(dbDir, { recursive: true });
+    console.log(`Created database directory: ${dbDir}`);
+}
 
 // Initialize Express
 const app = express();

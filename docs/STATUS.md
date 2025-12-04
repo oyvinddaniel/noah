@@ -182,9 +182,33 @@ _Ingen ennå_
 
 ## Deployment status
 
-- **Environment:** Lokal utvikling
-- **URL:** http://localhost:3001
-- **Siste deploy:** Ikke deployet
+- **Environment:** Klar for Railway deployment
+- **Lokal URL:** http://localhost:3001
+- **Siste deploy:** Ikke deployet ennå
+
+### Railway Deployment Instruksjoner
+
+**Alternativ 1: GitHub Integration (Anbefalt)**
+1. Push til GitHub: `git remote add origin <din-repo-url>` + `git push -u origin main`
+2. Gå til https://railway.app og logg inn
+3. Klikk "New Project" → "Deploy from GitHub repo"
+4. Velg ditt repository
+5. Legg til environment variable: `ADMIN_SECRET` = din-hemmelige-kode
+6. Legg til Volume (for database): Mount path `/data`
+7. Sett `DATABASE_PATH=/data/app.db`
+
+**Alternativ 2: Railway CLI**
+```bash
+npm install -g @railway/cli
+railway login
+railway init
+railway up
+```
+
+**Environment Variables å sette:**
+- `ADMIN_SECRET` - Hemmelighet for admin-tilgang (default: noah-admin-2024)
+- `DATABASE_PATH` - Sti til database (bruk /data/app.db med volume)
+- `NODE_ENV` - Sett til "production"
 
 ---
 
