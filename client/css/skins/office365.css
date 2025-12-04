@@ -1,0 +1,154 @@
+/* Office 365 Word Skin */
+
+[data-skin="office365"] {
+    --office-blue: #2b579a;
+    --office-light-blue: #41a5ee;
+    --office-gray: #d4d4d4;
+    --office-ribbon: #f3f3f3;
+    --office-dark: #333333;
+}
+
+[data-skin="office365"] body {
+    background: #e6e6e6;
+}
+
+[data-skin="office365"] #header {
+    background: var(--office-blue);
+    border-bottom: none;
+    padding: 4px 12px;
+}
+
+[data-skin="office365"] .doc-icon::before {
+    content: "📝";
+}
+
+[data-skin="office365"] .doc-icon {
+    background: white;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+[data-skin="office365"] .doc-title {
+    color: white;
+    font-size: 14px;
+}
+
+[data-skin="office365"] .doc-status {
+    color: rgba(255,255,255,0.8);
+}
+
+[data-skin="office365"] .user-count {
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+[data-skin="office365"] #menu-bar {
+    background: var(--office-ribbon);
+    border-bottom: 1px solid var(--office-gray);
+}
+
+[data-skin="office365"] .menu-item {
+    color: var(--office-dark);
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+[data-skin="office365"] .menu-item:first-child {
+    background: var(--office-blue);
+    color: white;
+}
+
+[data-skin="office365"] .menu-item:hover:not(:first-child) {
+    background: #e1e1e1;
+}
+
+[data-skin="office365"] #toolbar {
+    background: var(--office-ribbon);
+    border-bottom: 1px solid var(--office-gray);
+    padding: 8px 12px;
+}
+
+[data-skin="office365"] .tool-btn {
+    color: var(--office-dark);
+}
+
+[data-skin="office365"] #document-area {
+    background: #828282;
+    padding: 30px;
+}
+
+[data-skin="office365"] .document-page {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    max-width: 850px;
+    padding: 96px 96px;
+    min-height: 1100px;
+}
+
+[data-skin="office365"] .document-page h1 {
+    color: var(--office-dark);
+    font-family: 'Calibri', 'Segoe UI', sans-serif;
+}
+
+[data-skin="office365"] .document-page h2 {
+    color: var(--office-blue);
+    font-family: 'Calibri', 'Segoe UI', sans-serif;
+}
+
+[data-skin="office365"] .document-page p,
+[data-skin="office365"] .document-page li {
+    font-family: 'Calibri', 'Segoe UI', sans-serif;
+    font-size: 11pt;
+    line-height: 1.6;
+}
+
+[data-skin="office365"] #sidebar {
+    background: var(--office-ribbon);
+    border-left: 1px solid var(--office-gray);
+}
+
+[data-skin="office365"] .sidebar-section {
+    border-bottom: 1px solid var(--office-gray);
+}
+
+[data-skin="office365"] .sidebar-section h3 {
+    color: var(--office-dark);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
+}
+
+[data-skin="office365"] .chat-nickname {
+    color: var(--office-blue);
+}
+
+[data-skin="office365"] .chat-message {
+    background: white;
+    border: 1px solid var(--office-gray);
+    border-radius: 2px;
+}
+
+[data-skin="office365"] #chat-input {
+    border-radius: 2px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+[data-skin="office365"] #send-btn {
+    background: var(--office-blue);
+    border-radius: 2px;
+}
+
+[data-skin="office365"] .poll-option-fill {
+    background: var(--office-light-blue);
+}
+
+[data-skin="office365"] #countdown-display {
+    color: var(--office-blue);
+}
+
+[data-skin="office365"] #admin-panel {
+    border-radius: 0;
+}
+
+[data-skin="office365"] .admin-header {
+    background: var(--office-blue);
+}

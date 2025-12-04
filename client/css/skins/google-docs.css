@@ -1,0 +1,68 @@
+/* Google Docs Skin */
+
+[data-skin="google-docs"] {
+    --gdocs-blue: #1a73e8;
+    --gdocs-gray: #5f6368;
+    --gdocs-light: #f1f3f4;
+    --gdocs-white: #ffffff;
+    --gdocs-border: #dadce0;
+}
+
+[data-skin="google-docs"] body {
+    background: var(--gdocs-light);
+}
+
+[data-skin="google-docs"] #header {
+    background: var(--gdocs-white);
+    border-bottom: 1px solid var(--gdocs-border);
+}
+
+[data-skin="google-docs"] .doc-title {
+    color: #202124;
+}
+
+[data-skin="google-docs"] #menu-bar {
+    background: var(--gdocs-white);
+}
+
+[data-skin="google-docs"] .menu-item {
+    color: var(--gdocs-gray);
+}
+
+[data-skin="google-docs"] #toolbar {
+    background: var(--gdocs-white);
+}
+
+[data-skin="google-docs"] #document-area {
+    background: var(--gdocs-light);
+}
+
+[data-skin="google-docs"] .document-page {
+    background: var(--gdocs-white);
+    box-shadow: 0 1px 3px rgba(60, 64, 67, 0.15);
+}
+
+[data-skin="google-docs"] #sidebar {
+    background: var(--gdocs-white);
+    border-left: 1px solid var(--gdocs-border);
+}
+
+[data-skin="google-docs"] .sidebar-section h3 {
+    color: var(--gdocs-gray);
+}
+
+[data-skin="google-docs"] .chat-nickname {
+    color: var(--gdocs-blue);
+}
+
+[data-skin="google-docs"] #send-btn {
+    background: var(--gdocs-blue);
+}
+
+[data-skin="google-docs"] .poll-option-fill {
+    background: var(--gdocs-blue);
+}
+
+[data-skin="google-docs"] #countdown-display {
+    color: var(--gdocs-blue);
+}

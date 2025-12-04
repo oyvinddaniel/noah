@@ -1,0 +1,184 @@
+/* Kahoot Skin */
+
+[data-skin="kahoot"] {
+    --kahoot-purple: #46178f;
+    --kahoot-white: #ffffff;
+    --kahoot-light-purple: #864cbf;
+    --kahoot-pink: #e21b3c;
+    --kahoot-blue: #1368ce;
+    --kahoot-yellow: #d89e00;
+    --kahoot-green: #26890c;
+}
+
+[data-skin="kahoot"] body {
+    background: var(--kahoot-purple);
+    color: white;
+}
+
+[data-skin="kahoot"] #header {
+    background: var(--kahoot-purple);
+    border-bottom: none;
+}
+
+[data-skin="kahoot"] .doc-icon::before {
+    content: "🎮";
+}
+
+[data-skin="kahoot"] .doc-icon {
+    color: white;
+}
+
+[data-skin="kahoot"] .doc-title {
+    color: white;
+    font-weight: bold;
+}
+
+[data-skin="kahoot"] .doc-status {
+    color: rgba(255,255,255,0.7);
+}
+
+[data-skin="kahoot"] .user-count {
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+[data-skin="kahoot"] #menu-bar {
+    display: none;
+}
+
+[data-skin="kahoot"] #toolbar {
+    display: none;
+}
+
+[data-skin="kahoot"] #document-area {
+    background: var(--kahoot-purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+[data-skin="kahoot"] .document-page {
+    background: transparent;
+    box-shadow: none;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    min-height: auto;
+}
+
+[data-skin="kahoot"] .document-page h1 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+[data-skin="kahoot"] .document-page h2 {
+    color: white;
+    font-size: 24px;
+}
+
+[data-skin="kahoot"] .document-page p,
+[data-skin="kahoot"] .document-page ul {
+    display: none;
+}
+
+[data-skin="kahoot"] .document-page::before {
+    content: "Waiting for players...";
+    display: block;
+    font-size: 24px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+[data-skin="kahoot"] .document-page::after {
+    content: "Game PIN: 4 8 2 9 1 3";
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    background: rgba(255,255,255,0.1);
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+[data-skin="kahoot"] #sidebar {
+    background: var(--kahoot-light-purple);
+    border-left: none;
+}
+
+[data-skin="kahoot"] .sidebar-section {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+[data-skin="kahoot"] .sidebar-section h3 {
+    color: white;
+}
+
+[data-skin="kahoot"] #buddies-list li {
+    color: white;
+}
+
+[data-skin="kahoot"] .chat-message {
+    background: rgba(255,255,255,0.1);
+}
+
+[data-skin="kahoot"] .chat-nickname {
+    color: var(--kahoot-yellow);
+}
+
+[data-skin="kahoot"] .chat-content {
+    color: white;
+}
+
+[data-skin="kahoot"] .chat-time {
+    color: rgba(255,255,255,0.6);
+}
+
+[data-skin="kahoot"] #chat-input {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.3);
+    color: white;
+}
+
+[data-skin="kahoot"] #chat-input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+[data-skin="kahoot"] #send-btn {
+    background: var(--kahoot-green);
+}
+
+[data-skin="kahoot"] .poll-option-fill {
+    background: var(--kahoot-blue);
+}
+
+[data-skin="kahoot"] #countdown-display {
+    color: white;
+    font-size: 48px;
+}
+
+[data-skin="kahoot"] #pet-mood,
+[data-skin="kahoot"] #pet-level,
+[data-skin="kahoot"] #pet-strength {
+    color: white;
+}
+
+[data-skin="kahoot"] #pet-actions button {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.3);
+    color: white;
+}
+
+[data-skin="kahoot"] #pet-xp-bar {
+    background: rgba(255,255,255,0.2);
+}
+
+[data-skin="kahoot"] #admin-panel {
+    background: var(--kahoot-light-purple);
+}
+
+[data-skin="kahoot"] .admin-header {
+    background: var(--kahoot-purple);
+}

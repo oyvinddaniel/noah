@@ -1,0 +1,98 @@
+/* Wikipedia Skin */
+
+[data-skin="wikipedia"] {
+    --wiki-blue: #3366cc;
+    --wiki-red: #cc3333;
+    --wiki-bg: #f6f6f6;
+    --wiki-content-bg: #ffffff;
+    --wiki-border: #a2a9b1;
+}
+
+[data-skin="wikipedia"] body {
+    background: var(--wiki-bg);
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+}
+
+[data-skin="wikipedia"] #header {
+    background: var(--wiki-content-bg);
+    border-bottom: 1px solid var(--wiki-border);
+}
+
+[data-skin="wikipedia"] .doc-icon::before {
+    content: "🌐";
+}
+
+[data-skin="wikipedia"] .doc-title {
+    font-family: 'Linux Libertine', serif;
+    font-size: 20px;
+}
+
+[data-skin="wikipedia"] #menu-bar {
+    background: var(--wiki-content-bg);
+    border-bottom: 1px solid var(--wiki-border);
+}
+
+[data-skin="wikipedia"] .menu-item {
+    color: var(--wiki-blue);
+    text-decoration: none;
+}
+
+[data-skin="wikipedia"] .menu-item:hover {
+    text-decoration: underline;
+    background: transparent;
+}
+
+[data-skin="wikipedia"] #toolbar {
+    display: none;
+}
+
+[data-skin="wikipedia"] #document-area {
+    background: var(--wiki-content-bg);
+}
+
+[data-skin="wikipedia"] .document-page {
+    box-shadow: none;
+    max-width: 960px;
+    padding: 20px 40px;
+}
+
+[data-skin="wikipedia"] .document-page h1 {
+    font-family: 'Linux Libertine', serif;
+    font-size: 28px;
+    border-bottom: 1px solid var(--wiki-border);
+    padding-bottom: 5px;
+}
+
+[data-skin="wikipedia"] .document-page h2 {
+    font-family: 'Linux Libertine', serif;
+    border-bottom: 1px solid var(--wiki-border);
+}
+
+[data-skin="wikipedia"] .document-page a,
+[data-skin="wikipedia"] .chat-nickname {
+    color: var(--wiki-blue);
+}
+
+[data-skin="wikipedia"] #sidebar {
+    background: var(--wiki-bg);
+    border-left: 1px solid var(--wiki-border);
+}
+
+[data-skin="wikipedia"] .sidebar-section {
+    border-bottom: 1px solid var(--wiki-border);
+}
+
+[data-skin="wikipedia"] .sidebar-section h3 {
+    color: #54595d;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+[data-skin="wikipedia"] #send-btn {
+    background: var(--wiki-blue);
+}
+
+[data-skin="wikipedia"] .poll-option-fill {
+    background: var(--wiki-blue);
+}

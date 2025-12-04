@@ -1,0 +1,123 @@
+/* Stack Overflow Skin */
+
+[data-skin="stackoverflow"] {
+    --so-orange: #f48024;
+    --so-black: #242729;
+    --so-gray: #6a737c;
+    --so-light: #fdf7e2;
+    --so-blue: #0077cc;
+    --so-bg: #f1f2f3;
+}
+
+[data-skin="stackoverflow"] body {
+    background: var(--so-bg);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Liberation Sans', sans-serif;
+}
+
+[data-skin="stackoverflow"] #header {
+    background: #fafafb;
+    border-bottom: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    border-top: 3px solid var(--so-orange);
+}
+
+[data-skin="stackoverflow"] .doc-icon::before {
+    content: "🟧";
+}
+
+[data-skin="stackoverflow"] .doc-title {
+    font-weight: normal;
+    color: var(--so-black);
+}
+
+[data-skin="stackoverflow"] #menu-bar {
+    background: #fafafb;
+    border-bottom: 1px solid #e3e6e8;
+}
+
+[data-skin="stackoverflow"] .menu-item {
+    color: var(--so-gray);
+    font-size: 13px;
+}
+
+[data-skin="stackoverflow"] .menu-item:hover {
+    background: #e3e6e8;
+    color: var(--so-black);
+}
+
+[data-skin="stackoverflow"] #toolbar {
+    display: none;
+}
+
+[data-skin="stackoverflow"] #document-area {
+    background: var(--so-bg);
+}
+
+[data-skin="stackoverflow"] .document-page {
+    background: white;
+    border: 1px solid #e3e6e8;
+    border-radius: 3px;
+    box-shadow: none;
+    max-width: 900px;
+    padding: 24px;
+}
+
+[data-skin="stackoverflow"] .document-page h1 {
+    color: var(--so-blue);
+    font-size: 22px;
+    font-weight: normal;
+}
+
+[data-skin="stackoverflow"] .document-page h2 {
+    font-size: 18px;
+    color: var(--so-black);
+}
+
+[data-skin="stackoverflow"] .document-page code {
+    background: #f6f6f6;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'SF Mono', 'Consolas', monospace;
+}
+
+[data-skin="stackoverflow"] #sidebar {
+    background: var(--so-bg);
+    border-left: none;
+}
+
+[data-skin="stackoverflow"] .sidebar-section {
+    background: white;
+    border: 1px solid #e3e6e8;
+    border-radius: 3px;
+    margin: 10px;
+    padding: 12px;
+}
+
+[data-skin="stackoverflow"] .sidebar-section h3 {
+    color: var(--so-black);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+[data-skin="stackoverflow"] .chat-nickname {
+    color: var(--so-blue);
+}
+
+[data-skin="stackoverflow"] .chat-message {
+    background: var(--so-light);
+    border-left: 3px solid #e3e6e8;
+    border-radius: 0;
+}
+
+[data-skin="stackoverflow"] #send-btn {
+    background: var(--so-blue);
+    border-radius: 3px;
+}
+
+[data-skin="stackoverflow"] .poll-option-fill {
+    background: var(--so-orange);
+}
+
+[data-skin="stackoverflow"] #countdown-display {
+    color: var(--so-orange);
+}

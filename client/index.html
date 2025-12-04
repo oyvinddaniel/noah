@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norsk - Kapittel 4 Notater - Google Dokumenter</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/skins/google-docs.css" id="skin-stylesheet">
+</head>
+<body data-skin="google-docs">
+    <!-- Nickname Modal -->
+    <div id="nickname-modal" class="modal">
+        <div class="modal-content">
+            <h2>Velg kallenavn</h2>
+            <input type="text" id="nickname-input" placeholder="Ditt kallenavn..." maxlength="20" autofocus>
+            <div id="admin-toggle" style="margin: 10px 0; font-size: 12px; color: #666;">
+                <label><input type="checkbox" id="admin-checkbox"> Admin?</label>
+            </div>
+            <input type="password" id="admin-code" placeholder="Admin-kode..." style="display: none; margin-top: 5px;">
+            <button id="join-btn">Bli med</button>
+        </div>
+    </div>
+
+    <!-- Mobile sidebar toggle button -->
+    <button id="mobile-sidebar-toggle" aria-label="Åpne meny">💬</button>
+    <!-- Mobile backdrop -->
+    <div id="sidebar-backdrop"></div>
+
+    <!-- Main App Container -->
+    <div id="app" class="hidden">
+        <!-- Header / Toolbar -->
+        <header id="header">
+            <div class="header-left">
+                <span class="doc-icon">📄</span>
+                <input type="text" class="doc-title" value="Norsk - Kapittel 4 Notater" readonly>
+                <span class="doc-status">✓ Alle endringer er lagret i Disk</span>
+            </div>
+            <div class="header-right">
+                <button class="header-btn" title="Bytt skin (Ctrl+Shift+1-6)">
+                    <select id="skin-selector">
+                        <option value="google-docs">📄 Google Docs</option>
+                        <option value="wikipedia">🌐 Wikipedia</option>
+                        <option value="stackoverflow">🟧 Stack Overflow</option>
+                        <option value="google-translate">🌍 Google Translate</option>
+                        <option value="kahoot">🎮 Kahoot</option>
+                        <option value="office365">📝 Office 365</option>
+                    </select>
+                </button>
+                <span class="user-count" id="user-count">0 online</span>
+            </div>
+        </header>
+
+        <!-- Menu bar -->
+        <nav id="menu-bar">
+            <span class="menu-item">Fil</span>
+            <span class="menu-item">Rediger</span>
+            <span class="menu-item">Vis</span>
+            <span class="menu-item">Sett inn</span>
+            <span class="menu-item">Format</span>
+            <span class="menu-item">Verktøy</span>
+            <span class="menu-item">Tillegg</span>
+            <span class="menu-item">Hjelp</span>
+        </nav>
+
+        <!-- Toolbar -->
+        <div id="toolbar">
+            <button class="tool-btn">↩</button>
+            <button class="tool-btn">↪</button>
+            <span class="tool-divider"></span>
+            <select class="tool-select"><option>100%</option></select>
+            <span class="tool-divider"></span>
+            <select class="tool-select"><option>Normal tekst</option></select>
+            <span class="tool-divider"></span>
+            <select class="tool-select"><option>Arial</option></select>
+            <select class="tool-select" style="width:50px"><option>11</option></select>
+            <span class="tool-divider"></span>
+            <button class="tool-btn">B</button>
+            <button class="tool-btn"><i>I</i></button>
+            <button class="tool-btn"><u>U</u></button>
+        </div>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Document Area -->
+            <div id="document-area">
+                <div class="document-page">
+                    <h1>Henrik Ibsen og Et dukkehjem</h1>
+                    <p>Henrik Ibsen (1828-1906) var en norsk dramatiker og teaterdirektør som regnes som en av de mest innflytelsesrike dramatikerne i verdenshistorien. Han blir ofte kalt "den moderne dramaets far".</p>
+                    <h2>Et dukkehjem (1879)</h2>
+                    <p>Et dukkehjem er et av Ibsens mest kjente og kontroversielle verk. Stykket handler om Nora Helmer, en tilsynelatende lykkelig gift kvinne som lever et behagelig liv med sin mann Torvald og deres tre barn.</p>
+                    <p>Dramaet utforsker temaer som:</p>
+                    <ul>
+                        <li>Kjønnsroller og kvinners stilling i samfunnet</li>
+                        <li>Ekteskapets natur og ærlighet i forhold</li>
+                        <li>Selvrealisering og personlig frihet</li>
+                        <li>Samfunnets forventninger vs. individets behov</li>
+                    </ul>
+                    <h2>Betydning</h2>
+                    <p>Stykkets avslutning, der Nora forlater mann og barn for å "finne seg selv", var sjokkerende for samtidens publikum og skapte stor debatt om kvinners rettigheter.</p>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                <div class="sidebar-header">
+                    <span>Verktøy</span>
+                    <button id="sidebar-toggle" title="Minimer">◀</button>
+                </div>
+                <div id="sidebar-content">
+                    <!-- Buddies -->
+                    <div class="sidebar-section" id="buddies-section">
+                        <h3>👥 Online</h3>
+                        <ul id="buddies-list"></ul>
+                    </div>
+
+                    <!-- Countdown -->
+                    <div class="sidebar-section" id="countdown-section">
+                        <h3>⏱️ Friminutt</h3>
+                        <div id="countdown-display">--:--</div>
+                    </div>
+
+                    <!-- Pet (Tamagotchi) -->
+                    <div class="sidebar-section" id="pet-section">
+                        <h3>🐸 Klasse-Pet</h3>
+                        <div id="pet-display">
+                            <div id="pet-character-info">
+                                <span id="pet-character">Goblin</span>
+                                <span id="pet-prestige" class="hidden">⭐ 0</span>
+                            </div>
+                            <div id="pet-sprite" class="pet-goblin pet-stage-egg"></div>
+                            <div id="pet-stage">🥚 Egg</div>
+                            <div id="pet-mood">😊 Happy</div>
+
+                            <!-- Needs bars -->
+                            <div id="pet-needs">
+                                <div class="need-bar">
+                                    <span class="need-label">🍖 Sult</span>
+                                    <div class="need-bar-bg">
+                                        <div id="hunger-fill" class="need-bar-fill"></div>
+                                    </div>
+                                    <span id="hunger-value">100%</span>
+                                </div>
+                                <div class="need-bar">
+                                    <span class="need-label">⚡ Energi</span>
+                                    <div class="need-bar-bg">
+                                        <div id="energy-fill" class="need-bar-fill"></div>
+                                    </div>
+                                    <span id="energy-value">100%</span>
+                                </div>
+                            </div>
+
+                            <!-- Evolution progress -->
+                            <div id="evolution-progress">
+                                <div class="progress-item">
+                                    <span>🍖</span>
+                                    <div class="progress-bar-bg">
+                                        <div id="feeds-progress" class="progress-bar-fill"></div>
+                                    </div>
+                                    <span id="feeds-count">0/10</span>
+                                </div>
+                                <div class="progress-item">
+                                    <span>🏋️</span>
+                                    <div class="progress-bar-bg">
+                                        <div id="trains-progress" class="progress-bar-fill"></div>
+                                    </div>
+                                    <span id="trains-count">0/0</span>
+                                </div>
+                            </div>
+
+                            <div id="pet-level">Level 1</div>
+                            <div id="pet-xp-bar">
+                                <div id="pet-xp-fill"></div>
+                            </div>
+                            <div id="pet-strength">💪 1</div>
+                        </div>
+                        <div id="pet-actions">
+                            <button id="feed-btn">🍖 Mat</button>
+                            <button id="train-btn">🏋️ Tren</button>
+                        </div>
+                    </div>
+
+                    <!-- Polls -->
+                    <div class="sidebar-section" id="polls-section">
+                        <h3>📊 Polls</h3>
+                        <div id="polls-container"></div>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="sidebar-section" id="achievements-section">
+                        <h3>🏆 Achievements</h3>
+                        <div id="achievements-container"></div>
+                    </div>
+
+                    <!-- Predictions -->
+                    <div class="sidebar-section" id="predictions-section">
+                        <h3>🔮 Predictions</h3>
+                        <div id="predictions-container"></div>
+                        <div id="leaderboard">
+                            <h4>🏆 Toppliste</h4>
+                            <ol id="leaderboard-list"></ol>
+                        </div>
+                    </div>
+
+                    <!-- Chat / Comments -->
+                    <div class="sidebar-section" id="chat-section">
+                        <h3>💬 Kommentarer</h3>
+                        <div id="chat-messages"></div>
+                        <div id="chat-input-container">
+                            <input type="text" id="chat-input" placeholder="Legg til kommentar..." maxlength="500">
+                            <button id="send-btn">➤</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Fireworks overlay for Ultimate Victory -->
+            <div id="fireworks-overlay" class="hidden">
+                <div id="fireworks-content">
+                    <h1>🎆 LEGENDARY! 🎆</h1>
+                    <p>Klassen fullførte alle evolusjoner!</p>
+                    <div id="fireworks-animation"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Admin Panel (hidden by default) -->
+        <div id="admin-panel" class="hidden">
+            <div class="admin-header">
+                <h3>👑 Admin Panel</h3>
+                <button id="admin-minimize">−</button>
+            </div>
+            <div class="admin-content">
+                <div class="admin-section">
+                    <h4>💬 Chat</h4>
+                    <button id="admin-clear-chat">Tøm chat</button>
+                </div>
+                <div class="admin-section">
+                    <h4>📊 Ny Poll</h4>
+                    <input type="text" id="poll-question" placeholder="Spørsmål...">
+                    <input type="text" id="poll-options" placeholder="Alternativ 1, Alternativ 2, ...">
+                    <select id="poll-type">
+                        <option value="multi">Flervalg</option>
+                        <option value="yesno">Ja/Nei</option>
+                        <option value="scale">Skala 1-10</option>
+                    </select>
+                    <button id="admin-create-poll">Opprett poll</button>
+                </div>
+                <div class="admin-section">
+                    <h4>🔮 Ny Prediction</h4>
+                    <input type="text" id="prediction-question" placeholder="Hva tror dere skjer?">
+                    <input type="text" id="prediction-options" placeholder="Alternativ 1, Alternativ 2, ...">
+                    <button id="admin-create-prediction">Opprett prediction</button>
+                    <div id="admin-predictions-list"></div>
+                </div>
+                <div class="admin-section">
+                    <h4>🐸 Pet</h4>
+                    <select id="admin-pet-skin">
+                        <option value="goblin">Goblin</option>
+                        <option value="mini-pekka">Mini P.E.K.K.A</option>
+                        <option value="knight">Knight</option>
+                        <option value="hog-rider">Hog Rider</option>
+                        <option value="mega-knight">Mega Knight</option>
+                        <option value="bandit">Bandit</option>
+                    </select>
+                    <button id="admin-change-pet">Bytt skin</button>
+                    <button id="admin-reset-pet">Reset stats</button>
+                </div>
+                <div class="admin-section">
+                    <h4>👥 Brukere</h4>
+                    <div id="admin-users-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- App Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

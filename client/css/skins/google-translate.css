@@ -1,0 +1,107 @@
+/* Google Translate Skin */
+
+[data-skin="google-translate"] {
+    --gtrans-blue: #4285f4;
+    --gtrans-gray: #5f6368;
+    --gtrans-light: #f8f9fa;
+    --gtrans-border: #dadce0;
+}
+
+[data-skin="google-translate"] body {
+    background: var(--gtrans-light);
+}
+
+[data-skin="google-translate"] #header {
+    background: white;
+    border-bottom: 1px solid var(--gtrans-border);
+}
+
+[data-skin="google-translate"] .doc-icon::before {
+    content: "🌍";
+}
+
+[data-skin="google-translate"] .doc-title {
+    color: var(--gtrans-gray);
+}
+
+[data-skin="google-translate"] #menu-bar {
+    display: none;
+}
+
+[data-skin="google-translate"] #toolbar {
+    display: none;
+}
+
+[data-skin="google-translate"] #document-area {
+    background: var(--gtrans-light);
+    padding: 0;
+}
+
+[data-skin="google-translate"] .document-page {
+    display: flex;
+    max-width: 100%;
+    min-height: auto;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+[data-skin="google-translate"] .document-page h1,
+[data-skin="google-translate"] .document-page h2,
+[data-skin="google-translate"] .document-page p,
+[data-skin="google-translate"] .document-page ul {
+    display: none;
+}
+
+[data-skin="google-translate"] #main-content {
+    flex-direction: column;
+}
+
+[data-skin="google-translate"] #sidebar {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-left: none;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+[data-skin="google-translate"] .sidebar-section {
+    border-bottom: 1px solid var(--gtrans-border);
+}
+
+[data-skin="google-translate"] #chat-section {
+    padding: 24px;
+}
+
+[data-skin="google-translate"] .chat-message {
+    display: flex;
+    gap: 20px;
+    background: transparent;
+    border-bottom: 1px solid var(--gtrans-border);
+    border-radius: 0;
+    padding: 16px 0;
+}
+
+[data-skin="google-translate"] .chat-nickname {
+    color: var(--gtrans-blue);
+    min-width: 100px;
+}
+
+[data-skin="google-translate"] #chat-input {
+    border-radius: 4px;
+}
+
+[data-skin="google-translate"] #send-btn {
+    background: var(--gtrans-blue);
+    border-radius: 4px;
+}
+
+[data-skin="google-translate"] .poll-option-fill {
+    background: var(--gtrans-blue);
+}
+
+[data-skin="google-translate"] #countdown-display {
+    color: var(--gtrans-blue);
+}
